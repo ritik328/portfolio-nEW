@@ -190,12 +190,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function applyProfileStyles() {
+      const previewImg = document.getElementById('dev-preview-img');
+      const previewWrapper = document.getElementById('dev-preview-wrapper');
+
       if (customImgData) {
         profileImg.src = customImgData;
+        if (previewImg) {
+          previewImg.src = customImgData;
+        }
       }
-      profileImg.style.transform = `scale(${currentScale}) translateY(${currentY}px)`;
+      
+      const transformStyle = `scale(${currentScale}) translateY(${currentY}px)`;
+      profileImg.style.transform = transformStyle;
+      if (previewImg) {
+        previewImg.style.transform = transformStyle;
+      }
+      
       if (photoWrapper) {
         photoWrapper.style.borderRadius = currentRadius;
+      }
+      if (previewWrapper) {
+        previewWrapper.style.borderRadius = currentRadius;
       }
     }
 
