@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Brain — Case Study | Hritik</title>
+  <meta name="description" content="Company Brain: An AI-powered enterprise knowledge operating system designed to centralize fragmented organizational knowledge using RAG, semantic retrieval, and AI synthesis.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/case-study.css">
+</head>
+<body class="case-study-page">
+
+  <!-- ═══ BACK NAV ═══ -->
+  <nav class="case-nav">
+    <a href="index.html" class="back-link">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Portfolio
+    </a>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span class="case-nav-label">Case Study</span>
+      <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO BANNER ═══ -->
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-badge reveal">Enterprise Knowledge System</div>
+      <h1 class="case-hero-title reveal reveal-delay-1">
+        <span class="solid-block">Company</span>
+        <span class="outline-block">Brain</span>
+      </h1>
+      <p class="case-hero-subtitle reveal reveal-delay-2">
+        An AI-powered enterprise knowledge operating system that transforms scattered organizational information into a retrievable, structured, and AI-usable knowledge layer.
+      </p>
+      <div class="case-hero-meta reveal reveal-delay-3">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">AI Systems Design</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Type</span>
+          <span class="meta-value">Enterprise Architecture</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">RAG · Data Engineering</span>
+        </div>
+      </div>
+      <div class="case-hero-tags reveal reveal-delay-4">
+        <span class="cs-tag">RAG</span>
+        <span class="cs-tag">Enterprise AI</span>
+        <span class="cs-tag">Data Engineering</span>
+        <span class="cs-tag">Semantic Retrieval</span>
+        <span class="cs-tag">Vector Databases</span>
+        <span class="cs-tag">Knowledge Systems</span>
+      </div>
+    </div>
+    <div class="case-hero-img reveal reveal-delay-3">
+      <img src="assets/company-brain.png" alt="Company Brain visualization">
+    </div>
+  </header>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="case-content">
+
+    <!-- ── OVERVIEW ── -->
+    <section class="cs-section" id="overview">
+      <div class="cs-section-label reveal">01 — Overview</div>
+      <h2 class="cs-heading reveal">The Core Challenge</h2>
+      <div class="cs-blockquote reveal">
+        <span class="bq-icon">💡</span>
+        <p>Valuable organizational knowledge exists everywhere, but usable understanding exists nowhere.</p>
+      </div>
+      <div class="cs-text-block reveal">
+        <p>As companies scale, information becomes fragmented across multiple tools. Employees spend significant time searching for information that already exists. AI assistants struggle to provide useful company-specific answers because they lack access to current organizational context.</p>
+        <p>I designed Company Brain as a conceptual enterprise intelligence system — the long-term vision being <strong>an enterprise operating system for organizational intelligence.</strong></p>
+      </div>
+
+      <!-- Tool fragmentation infographic -->
+      <div class="fragmentation-visual reveal">
+        <div class="frag-label">Knowledge Scattered Across</div>
+        <div class="frag-grid">
+          <div class="frag-item">
+            <div class="frag-icon">💬</div>
+            <span>Slack</span>
+          </div>
+          <div class="frag-item">
+            <div class="frag-icon">📝</div>
+            <span>Notion</span>
+          </div>
+          <div class="frag-item">
+            <div class="frag-icon">🐙</div>
+            <span>GitHub</span>
+          </div>
+          <div class="frag-item">
+            <div class="frag-icon">📋</div>
+            <span>Jira</span>
+          </div>
+          <div class="frag-item">
+            <div class="frag-icon">📄</div>
+            <span>Docs</span>
+          </div>
+          <div class="frag-item">
+            <div class="frag-icon">🎙️</div>
+            <span>Meetings</span>
+          </div>
+          <div class="frag-item">
+            <div class="frag-icon">📑</div>
+            <span>SOPs</span>
+          </div>
+        </div>
+        <div class="frag-arrow-down">
+          <svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 32 M4 24 L12 34 L20 24" stroke="#e8653a" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div class="frag-result">
+          <div class="frag-icon-big">🧠</div>
+          <span>Company Brain — One Intelligence Layer</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ── THE PROBLEM ── -->
+    <section class="cs-section" id="problem">
+      <div class="cs-section-label reveal">02 — The Problem</div>
+      <h2 class="cs-heading reveal">Why Enterprise Knowledge Breaks</h2>
+
+      <div class="problem-grid">
+        <!-- Problem 1 -->
+        <div class="problem-card reveal">
+          <div class="problem-number">01</div>
+          <div class="problem-icon">🔍</div>
+          <h3>Knowledge Fragmentation</h3>
+          <p>Information exists, but is difficult to retrieve. A single answer might live across a Slack thread, an outdated Notion doc, GitHub logic, and a senior employee's memory.</p>
+          <div class="problem-highlight">
+            <span class="ph-label">The knowledge exists.</span>
+            <span class="ph-accent">Access does not.</span>
+          </div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="problem-number">02</div>
+          <div class="problem-icon">🐢</div>
+          <h3>Slow Organizational Learning</h3>
+          <p>New employees spend weeks understanding internal systems, workflows, ownership structures, and engineering practices.</p>
+          <div class="problem-highlight">
+            <span class="ph-label">The challenge isn't lack of information —</span>
+            <span class="ph-accent">it's inability to find the right information.</span>
+          </div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="problem-number">03</div>
+          <div class="problem-icon">🚪</div>
+          <h3>Knowledge Loss</h3>
+          <p>When employees leave, important organizational context disappears — undocumented workflows, decision reasoning, technical knowledge, and process ownership.</p>
+          <div class="problem-highlight">
+            <span class="ph-label">Knowledge becomes</span>
+            <span class="ph-accent">person-dependent, not system-dependent.</span>
+          </div>
+        </div>
+
+        <!-- Problem 4 -->
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="problem-number">04</div>
+          <div class="problem-icon">🤖</div>
+          <h3>AI Without Company Context</h3>
+          <p>LLMs know public information but not company policies, workflows, project decisions, or internal terminology. Without retrieval, enterprise AI is unreliable.</p>
+          <div class="problem-highlight">
+            <span class="ph-label">Results in hallucinated answers,</span>
+            <span class="ph-accent">outdated recommendations, and low trust.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ── WHY EXISTING SYSTEMS FAIL ── -->
+    <section class="cs-section" id="insight">
+      <div class="cs-section-label reveal">03 — Key Insight</div>
+      <h2 class="cs-heading reveal">Documents ≠ Answers</h2>
+      
+      <div class="comparison-visual reveal">
+        <div class="comparison-side comparison-bad">
+          <div class="comp-label">❌ What Search Returns</div>
+          <div class="comp-content">
+            <div class="comp-icon">📄</div>
+            <p>"Here are 14 documents related to payments"</p>
+          </div>
+          <div class="comp-tags">
+            <span>Document links</span>
+            <span>No context</span>
+            <span>Keyword matching</span>
+          </div>
+        </div>
+        <div class="comparison-arrow">
+          <svg width="40" height="24" viewBox="0 0 40 24"><path d="M0 12 L32 12 M24 4 L34 12 L24 20" stroke="#e8653a" stroke-width="2.5" fill="none"/></svg>
+        </div>
+        <div class="comparison-side comparison-good">
+          <div class="comp-label">✅ What Users Actually Want</div>
+          <div class="comp-content">
+            <div class="comp-icon">🧠</div>
+            <p>"The refund approval SLA is 48 hours, owned by the Finance Operations team."</p>
+          </div>
+          <div class="comp-tags">
+            <span>Citations</span>
+            <span>Confidence</span>
+            <span>Freshness</span>
+            <span>Transparency</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-blockquote reveal" style="margin-top: 48px;">
+        <span class="bq-icon">🎯</span>
+        <p>This distinction — documents vs. answers — became a major design insight for Company Brain.</p>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ── VISION ── -->
+    <section class="cs-section" id="vision">
+      <div class="cs-section-label reveal">04 — Vision</div>
+      <h2 class="cs-heading reveal">An Intelligence Layer for Organizations</h2>
+      <div class="cs-blockquote reveal">
+        <span class="bq-icon">🌟</span>
+        <p>Enterprise knowledge should be queryable, contextual, and AI-readable.</p>
+      </div>
+
+      <div class="query-examples reveal">
+        <div class="query-item">
+          <span class="query-icon">→</span>
+          <p>"Who owns this process?"</p>
+        </div>
+        <div class="query-item">
+          <span class="query-icon">→</span>
+          <p>"What changed in deployment last week?"</p>
+        </div>
+        <div class="query-item">
+          <span class="query-icon">→</span>
+          <p>"How do refunds work?"</p>
+        </div>
+        <div class="query-item">
+          <span class="query-icon">→</span>
+          <p>"What systems are involved in customer onboarding?"</p>
+        </div>
+      </div>
+
+      <div class="vision-result reveal">
+        <span class="vr-label">Users receive</span>
+        <div class="vr-badges">
+          <span class="vr-badge vr-badge--orange">Grounded Answers</span>
+          <span class="vr-badge vr-badge--text">instead of</span>
+          <span class="vr-badge vr-badge--dim">Disconnected Documents</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ── APPROACH — 5 SYSTEMS ── -->
+    <section class="cs-section" id="approach">
+      <div class="cs-section-label reveal">05 — My Approach</div>
+      <h2 class="cs-heading reveal">Five Architectural Systems</h2>
+      <p class="cs-subtitle reveal">Rather than building another search tool, I designed Company Brain around five interconnected systems.</p>
+
+      <div class="systems-list">
+        <!-- System 1 -->
+        <div class="system-card reveal">
+          <div class="system-num">01</div>
+          <div class="system-body">
+            <h3>Knowledge Ingestion Layer</h3>
+            <p>Centralizes information from Slack, Notion, GitHub, Jira, internal docs, PDFs, and SOPs into one retrievable layer — eliminating silos.</p>
+            <div class="system-tags">
+              <span>Slack</span><span>Notion</span><span>GitHub</span><span>Jira</span><span>PDFs</span><span>SOPs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- System 2 -->
+        <div class="system-card system-card--highlight reveal">
+          <div class="system-num">02</div>
+          <div class="system-body">
+            <h3>Retrieval-Augmented Generation (RAG)</h3>
+            <p>Instead of depending purely on model memory, the system retrieves relevant organizational context, injects it, and generates grounded responses.</p>
+            <div class="rag-steps">
+              <div class="rag-step">
+                <span class="rag-step-num">1</span>
+                <span>Retrieve relevant context</span>
+              </div>
+              <div class="rag-step-arrow">→</div>
+              <div class="rag-step">
+                <span class="rag-step-num">2</span>
+                <span>Inject retrieved knowledge</span>
+              </div>
+              <div class="rag-step-arrow">→</div>
+              <div class="rag-step">
+                <span class="rag-step-num">3</span>
+                <span>Generate grounded responses</span>
+              </div>
+            </div>
+            <div class="system-benefits">
+              <span>✓ Accuracy</span>
+              <span>✓ Explainability</span>
+              <span>✓ Freshness</span>
+              <span>✓ Enterprise Trust</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- System 3 -->
+        <div class="system-card reveal">
+          <div class="system-num">03</div>
+          <div class="system-body">
+            <h3>Semantic Knowledge Retrieval</h3>
+            <p>Meaning-based retrieval instead of keyword matching. When someone asks "Who handles refunds?", the system retrieves "Finance Operations Process Owner" — even if the exact wording never appears.</p>
+            <div class="system-tags">
+              <span>Discoverability</span><span>Context Understanding</span><span>Accessibility</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- System 4 -->
+        <div class="system-card reveal">
+          <div class="system-num">04</div>
+          <div class="system-body">
+            <h3>Structured Organizational Intelligence</h3>
+            <p>Goes beyond documents to understand people, teams, systems, workflows, and relationships — building organizational understanding.</p>
+            <div class="org-flow">
+              <div class="org-flow-item">Refund Process</div>
+              <div class="org-flow-arrow">↓</div>
+              <div class="org-flow-item">Owned By → <strong>Finance Team</strong></div>
+              <div class="org-flow-arrow">↓</div>
+              <div class="org-flow-item">Uses → <strong>Stripe</strong></div>
+              <div class="org-flow-arrow">↓</div>
+              <div class="org-flow-item">Depends On → <strong>Payment Verification</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- System 5 -->
+        <div class="system-card reveal">
+          <div class="system-num">05</div>
+          <div class="system-body">
+            <h3>Enterprise Analytics Layer</h3>
+            <p>Turns enterprise intelligence into a measurable system — tracking what matters to continuously improve.</p>
+            <div class="analytics-items">
+              <div class="analytics-item">
+                <span class="ai-icon">📊</span>
+                <span>Frequently Asked Questions</span>
+              </div>
+              <div class="analytics-item">
+                <span class="ai-icon">📈</span>
+                <span>Retrieval Confidence</span>
+              </div>
+              <div class="analytics-item">
+                <span class="ai-icon">⏰</span>
+                <span>Stale Knowledge Detection</span>
+              </div>
+              <div class="analytics-item">
+                <span class="ai-icon">📭</span>
+                <span>Documentation Gaps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ── ARCHITECTURE ── -->
+    <section class="cs-section" id="architecture">
+      <div class="cs-section-label reveal">06 — Architecture</div>
+      <h2 class="cs-heading reveal">High-Level Enterprise Architecture</h2>
+
+      <div class="arch-pipeline reveal">
+        <div class="arch-step">
+          <div class="arch-step-icon">🌐</div>
+          <div class="arch-step-content">
+            <h4>Enterprise Data Sources</h4>
+            <p>Slack · GitHub · Notion · Jira</p>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="arch-line"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12"><polygon points="6,12 0,0 12,0" fill="#e8653a"/></svg>
+        </div>
+
+        <div class="arch-step">
+          <div class="arch-step-icon">📥</div>
+          <div class="arch-step-content">
+            <h4>Ingestion Layer</h4>
+            <p>Webhooks · APIs · Sync Jobs</p>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="arch-line"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12"><polygon points="6,12 0,0 12,0" fill="#e8653a"/></svg>
+        </div>
+
+        <div class="arch-step">
+          <div class="arch-step-icon">⚙️</div>
+          <div class="arch-step-content">
+            <h4>Processing Pipeline</h4>
+            <p>Clean → Chunk → Deduplicate → Embed</p>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="arch-line"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12"><polygon points="6,12 0,0 12,0" fill="#e8653a"/></svg>
+        </div>
+
+        <div class="arch-step arch-step--highlight">
+          <div class="arch-step-icon">💾</div>
+          <div class="arch-step-content">
+            <h4>Knowledge Layer</h4>
+            <p>Vector DB + Metadata + Graph Layer</p>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="arch-line"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12"><polygon points="6,12 0,0 12,0" fill="#e8653a"/></svg>
+        </div>
+
+        <div class="arch-step">
+          <div class="arch-step-icon">🔍</div>
+          <div class="arch-step-content">
+            <h4>Retrieval Engine</h4>
+            <p>Semantic Search + Ranking</p>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="arch-line"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12"><polygon points="6,12 0,0 12,0" fill="#e8653a"/></svg>
+        </div>
+
+        <div class="arch-step">
+          <div class="arch-step-icon">🤖</div>
+          <div class="arch-step-content">
+            <h4>LLM Synthesis Layer</h4>
+            <p>Context Injection + Answer Generation</p>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="arch-line"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12"><polygon points="6,12 0,0 12,0" fill="#e8653a"/></svg>
+        </div>
+
+        <div class="arch-step arch-step--final">
+          <div class="arch-step-icon">✅</div>
+          <div class="arch-step-content">
+            <h4>Enterprise Intelligence</h4>
+            <p>Cited Answers + Confidence + Freshness</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architecture Priorities -->
+      <div class="arch-priorities reveal">
+        <h3>Architecture Priorities</h3>
+        <div class="priority-grid">
+          <div class="priority-item">
+            <div class="priority-icon">🛡️</div>
+            <h4>Trust</h4>
+            <p>Answers should be explainable</p>
+          </div>
+          <div class="priority-item">
+            <div class="priority-icon">🎯</div>
+            <h4>Accuracy</h4>
+            <p>Retrieved knowledge must ground responses</p>
+          </div>
+          <div class="priority-item">
+            <div class="priority-icon">📈</div>
+            <h4>Scalability</h4>
+            <p>Works across multiple organizations</p>
+          </div>
+          <div class="priority-item">
+            <div class="priority-icon">🔒</div>
+            <h4>Enterprise Safety</h4>
+            <p>Avoids cross-company data leakage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ── RAG PIPELINE ── -->
+    <section class="cs-section" id="pipeline">
+      <div class="cs-section-label reveal">07 — RAG Pipeline</div>
+      <h2 class="cs-heading reveal">How Enterprise Knowledge Flows</h2>
+
+      <div class="pipeline-steps">
+        <div class="pipe-step reveal">
+          <div class="pipe-step-header">
+            <span class="pipe-num">Step 1</span>
+            <h3>Ingestion</h3>
+          </div>
+          <p>Data enters from Slack, Notion, GitHub, and internal documentation through webhooks, APIs, and sync jobs.</p>
+          <div class="pipe-visual">
+            <span>💬 Slack</span>
+            <span>📝 Notion</span>
+            <span>🐙 GitHub</span>
+            <span>📄 Docs</span>
+          </div>
+        </div>
+
+        <div class="pipe-step reveal">
+          <div class="pipe-step-header">
+            <span class="pipe-num">Step 2</span>
+            <h3>Processing</h3>
+          </div>
+          <p>Documents are cleaned, normalized, chunked, and deduplicated — improving retrieval quality downstream.</p>
+          <div class="pipe-flow">
+            <span>Clean</span><span class="pf-arrow">→</span>
+            <span>Normalize</span><span class="pf-arrow">→</span>
+            <span>Chunk</span><span class="pf-arrow">→</span>
+            <span>Deduplicate</span>
+          </div>
+        </div>
+
+        <div class="pipe-step reveal">
+          <div class="pipe-step-header">
+            <span class="pipe-num">Step 3</span>
+            <h3>Semantic Embedding</h3>
+          </div>
+          <p>Information is converted into vector embeddings for semantic search — enabling retrieval based on meaning rather than keywords.</p>
+        </div>
+
+        <div class="pipe-step reveal">
+          <div class="pipe-step-header">
+            <span class="pipe-num">Step 4</span>
+            <h3>Retrieval</h3>
+          </div>
+          <p>The system retrieves the most relevant organizational context before response generation.</p>
+          <div class="pipe-emphasis">
+            Retrieve <strong>better</strong> context, not <strong>more</strong> context.
+          </div>
+        </div>
+
+        <div class="pipe-step pipe-step--final reveal">
+          <div class="pipe-step-header">
+            <span class="pipe-num">Step 5</span>
+            <h3>AI Synthesis</h3>
+          </div>
+          <p>The language model receives grounded organizational context before generating responses.</p>
+          <div class="pipe-results">
+            <span>✓ Citations</span>
+            <span>✓ Confidence Scoring</span>
+            <span>✓ Context-Aware Answers</span>
+            <span>✓ Reduced Hallucinations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ── RAG vs Fine-Tuning ── -->
+    <section class="cs-section" id="rag-decision">
+      <div class="cs-section-label reveal">08 — Key Decision</div>
+      <h2 class="cs-heading reveal">Why RAG Instead of Fine-Tuning</h2>
+
+      <div class="decision-visual reveal">
+        <div class="decision-card decision-chosen">
+          <div class="decision-badge">✅ Chosen</div>
+          <h3>RAG (Retrieval-Augmented Generation)</h3>
+          <ul>
+            <li><span class="check">✓</span> Always fresh — retrieves current data</li>
+            <li><span class="check">✓</span> Explainable — shows citations</li>
+            <li><span class="check">✓</span> Cost-effective — no retraining</li>
+            <li><span class="check">✓</span> Verifiable — grounded in source docs</li>
+          </ul>
+        </div>
+        <div class="decision-vs">VS</div>
+        <div class="decision-card decision-rejected">
+          <div class="decision-badge">❌ Rejected</div>
+          <h3>Fine-Tuning</h3>
+          <ul>
+            <li><span class="cross">✗</span> Stale — requires retraining</li>
+            <li><span class="cross">✗</span> Opaque — can't cite sources</li>
+            <li><span class="cross">✗</span> Expensive — constant retraining</li>
+            <li><span class="cross">✗</span> Enterprise knowledge changes too fast</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cs-blockquote reveal" style="margin-top: 40px;">
+        <span class="bq-icon">⚡</span>
+        <p>Retrieval keeps information current and verifiable. This became a foundational design decision.</p>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ── WHY THIS MATTERS ── -->
+    <section class="cs-section" id="impact">
+      <div class="cs-section-label reveal">09 — Impact & Learnings</div>
+      <h2 class="cs-heading reveal">Why This Project Matters</h2>
+
+      <div class="cs-text-block reveal">
+        <p>Company Brain reflects my interest in <strong>enterprise AI systems</strong> rather than only AI interfaces. Through this project, I explored the architectural thinking required to build intelligent knowledge systems at scale.</p>
+      </div>
+
+      <div class="learnings-grid reveal">
+        <div class="learning-item">
+          <span class="learning-icon">🏗️</span>
+          <span>Enterprise RAG Architecture</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">🔍</span>
+          <span>Semantic Retrieval Systems</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">⚙️</span>
+          <span>AI Pipelines</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">🗄️</span>
+          <span>Data Engineering Thinking</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">🧠</span>
+          <span>Organizational Intelligence</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">📐</span>
+          <span>Scalable System Design</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">🔄</span>
+          <span>Enterprise Knowledge Workflows</span>
+        </div>
+      </div>
+
+      <div class="final-quote reveal">
+        <p>How organizations can move from fragmented information toward <span class="fq-highlight">intelligent knowledge systems.</span></p>
+      </div>
+    </section>
+
+    <!-- ── BACK CTA ── -->
+    <section class="cs-back-cta reveal">
+      <a href="index.html" class="back-cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to All Projects
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer" style="border-top: 1px solid rgba(255,255,255,0.06);">
+    <p>Built by <a href="index.html">Hritik</a> | Powered by Curiosity</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

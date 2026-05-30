@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delhi Traffic AI — Case Study | Hritik</title>
+  <meta name="description" content="Delhi Traffic Intelligence System: An AI-powered smart mobility platform optimizing urban traffic flow using real-time YOLO object detection and decentralized multi-agent coordination.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/delhi-traffic.css">
+</head>
+<body class="case-study-page">
+
+  <!-- ═══ BACK NAV ═══ -->
+  <nav class="case-nav">
+    <a href="index.html" class="back-link">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Portfolio
+    </a>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span class="case-nav-label" style="color: #ffb300;">Case Study</span>
+      <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO BANNER ═══ -->
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-badge reveal cs-tag--traffic">Smart Mobility Intelligence</div>
+      <h1 class="case-hero-title reveal reveal-delay-1">
+        <span class="solid-block" style="color: #ffb300;">Delhi Traffic</span>
+        <span class="outline-block">AI Platform</span>
+      </h1>
+      <p class="case-hero-subtitle reveal reveal-delay-2">
+        An AI-powered urban mobility platform designed to explore a massive city-scale problem: reducing traffic congestion and emissions in Delhi through real-time agentic system coordination.
+      </p>
+      <div class="case-hero-meta reveal reveal-delay-3">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">AI Systems Design</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">Data Engineering</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Architecture</span>
+          <span class="meta-value">Multi-Agent Systems</span>
+        </div>
+      </div>
+
+      <div class="case-hero-tags reveal reveal-delay-3">
+        <span class="cs-tag cs-tag--traffic">Smart Mobility</span>
+        <span class="cs-tag cs-tag--traffic">Computer Vision</span>
+        <span class="cs-tag cs-tag--traffic">Edge Inference</span>
+        <span class="cs-tag cs-tag--traffic">Data Pipelines</span>
+        <span class="cs-tag cs-tag--traffic">City Scale Analytics</span>
+      </div>
+
+      <div class="case-hero-img reveal reveal-delay-3">
+        <img src="assets/delhi-traffic.png" alt="Delhi Traffic Intelligence System">
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="case-content">
+
+    <!-- 01 — Overview -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">01 — Overview</div>
+      <h2 class="cs-heading">Optimizing City Flow at Megacity Scale</h2>
+      <div class="cs-blockquote cs-blockquote--traffic">
+        <div class="bq-icon">🚦</div>
+        <p>"Delhi's traffic isn't just a gridlock of cars; it's a massive, multi-modal engineering puzzle where static rules struggle against dynamic human behaviors."</p>
+      </div>
+
+      <div class="cs-text-block">
+        <p>Delhi Traffic Intelligence System is a conceptual AI-driven urban intelligence platform designed to explore a major real-world challenge: <strong>how can AI reduce traffic congestion at city scale?</strong></p>
+        <p>Traffic congestion in large cities such as Delhi affects travel times, fuel consumption, public health, economic efficiency, and environmental quality. Despite massive growth, many junctions still operate using <strong>static rules in highly dynamic environments</strong>.</p>
+        <p>This system replaces static signal cycles with a <strong>decentralized, camera-driven, and multi-agent coordination layer</strong> that senses traffic density and dynamically synchronizes green waves across arterial corridors.</p>
+      </div>
+
+      <!-- Unified City Brain Infographic -->
+      <div class="fragmentation-visual">
+        <div class="frag-label">Urban Congestion Inputs → Unified AI Actuation</div>
+        <div class="frag-grid">
+          <div class="frag-item" style="border-color: rgba(255, 179, 0, 0.15);">
+            <span class="frag-icon">🚗</span>
+            <span>Commuters</span>
+          </div>
+          <div class="frag-item" style="border-color: rgba(255, 179, 0, 0.15);">
+            <span class="frag-icon">🛺</span>
+            <span>Auto-Rickshaws</span>
+          </div>
+          <div class="frag-item" style="border-color: rgba(255, 179, 0, 0.15);">
+            <span class="frag-icon">🚌</span>
+            <span>Public Transit</span>
+          </div>
+          <div class="frag-item" style="border-color: rgba(255, 179, 0, 0.15);">
+            <span class="frag-icon">🚑</span>
+            <span>Emergencies</span>
+          </div>
+          <div class="frag-item" style="border-color: rgba(255, 179, 0, 0.15);">
+            <span class="frag-icon">🚶</span>
+            <span>Pedestrians</span>
+          </div>
+        </div>
+        <div class="frag-arrow-down">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </div>
+        <div class="frag-result" style="border-color: rgba(0, 240, 255, 0.25); background: rgba(0, 240, 255, 0.05);">
+          <span class="frag-icon-big">🏙️🧠</span>
+          <span style="color: #00f0ff;">Central Smart City Coordinator Layer</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 02 — The Challenge -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">02 — Congestion Impact</div>
+      <h2 class="cs-heading">The Four Tolls of Megacity Gridlocks</h2>
+      <p class="cs-subtitle">Congestion isn't merely an annoyance—it's a heavy toll levied daily on the economy, safety, and environment of the city.</p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-number">01</div>
+          <div class="problem-icon">⏳</div>
+          <h3>Time & Productivity Loss</h3>
+          <p>The average Delhi commuter wastes over 80 hours per year stuck in traffic, draining mental energy and reducing economic productivity.</p>
+          <div class="problem-highlight">
+            <span class="ph-label">Typical Commute Delay</span>
+            <span class="ph-accent" style="color: #ffb300;">+45-60 min daily delay</span>
+          </div>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-number">02</div>
+          <div class="problem-icon">🛢️</div>
+          <h3>Excessive Fuel Consumption</h3>
+          <p>Vehicles idling at static red lights consume millions of gallons of fuel in stop-and-go patterns, driving up transport costs.</p>
+          <div class="problem-highlight">
+            <span class="ph-label">Wasted Energy Impact</span>
+            <span class="ph-accent" style="color: #ffb300;">~25% higher fuel expenditure</span>
+          </div>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-number">03</div>
+          <div class="problem-icon">🌫️</div>
+          <h3>Air Quality Degradation</h3>
+          <p>Idling cars at poorly timed signals release concentrated carbon dioxide, nitrogen oxides, and PM2.5, worsening the city's severe winter smog.</p>
+          <div class="problem-highlight">
+            <span class="ph-label">Environmental Cost</span>
+            <span class="ph-accent" style="color: #ff3b30;">Severe localized AQI drops</span>
+          </div>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-number">04</div>
+          <div class="problem-icon">🚨</div>
+          <h3>Emergency Delays</h3>
+          <p>Ambulances and fire engines get trapped behind miles of gridlock with no dynamic path clearance, leading to critical delays in response times.</p>
+          <div class="problem-highlight">
+            <span class="ph-label">Emergency Latency</span>
+            <span class="ph-accent" style="color: #ff3b30;">Delayed emergency dispatches</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 03 — The Core Shift -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">03 — The Paradigm Shift</div>
+      <h2 class="cs-heading">From Static Cycles to Intelligent Adaptation</h2>
+      <p class="cs-subtitle">Moving away from rigid, pre-programmed timers toward a highly responsive, real-time demand system.</p>
+
+      <div class="comparison-visual">
+        <div class="comparison-side comparison-bad">
+          <span class="comp-label">Traditional Traffic Control</span>
+          <div class="comp-content">
+            <span class="comp-icon">❌</span>
+            <p>"Rigid cycles ignore real-time vehicle loads, keeping signals red even on completely empty lanes while cross-streets clog."</p>
+          </div>
+          <div class="comp-tags">
+            <span>Static Timers</span>
+            <span>No Sensor Feedback</span>
+            <span>Junction Isolation</span>
+          </div>
+        </div>
+
+        <div class="comparison-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb300" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+
+        <div class="comparison-side comparison-good" style="background: rgba(0, 240, 255, 0.02); border-color: rgba(0, 240, 255, 0.15);">
+          <span class="comp-label" style="color: #00f0ff;">AI-Optimized Traffic Control</span>
+          <div class="comp-content">
+            <span class="comp-icon">✅</span>
+            <p>"Decentralized edge nodes calculate queue length on the fly, dynamically allocating green time to maximize throughput."</p>
+          </div>
+          <div class="comp-tags">
+            <span style="color: #00f0ff; border-color: rgba(0, 240, 255, 0.2); background: rgba(0, 240, 255, 0.05);">Computer Vision Density</span>
+            <span style="color: #00f0ff; border-color: rgba(0, 240, 255, 0.2); background: rgba(0, 240, 255, 0.05);">Multi-Junction Waves</span>
+            <span style="color: #00f0ff; border-color: rgba(0, 240, 255, 0.2); background: rgba(0, 240, 255, 0.05);">Emergency Priority</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 04 — Active Control Modes -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">04 — Intelligence & Control</div>
+      <h2 class="cs-heading">Real-Time Traffic Control Modes</h2>
+      <p class="cs-subtitle">Delhi Traffic AI dynamically moves between three operation states depending on sensor inputs and priority dispatches.</p>
+
+      <div class="traffic-modes">
+        <div class="traffic-mode traffic-mode--static">
+          <div class="mm-icon">🛑</div>
+          <span class="tm-badge">Static Fallback</span>
+          <h3>Fixed Timer Mode</h3>
+          <p>Used only during system boots or sensor maintenance. Employs traditional time-of-day interval cycles.</p>
+          <div class="tm-visual">
+            <div class="tm-dot tm-dot--red"></div>
+            <div class="tm-line tm-line--dashed"></div>
+            <span class="tm-label">Unsynchronized</span>
+          </div>
+        </div>
+
+        <div class="traffic-mode traffic-mode--adaptive">
+          <div class="mm-icon">⚡</div>
+          <span class="tm-badge" style="background: rgba(0, 240, 255, 0.1); color: #00f0ff;">Active</span>
+          <h3>Dynamic Adaptive Mode</h3>
+          <p>Main system state. Cameras analyze vehicle classes (buses, cars, rickshaws) and adjust green phases dynamically.</p>
+          <div class="tm-visual">
+            <div class="tm-dot tm-dot--cyan"></div>
+            <div class="tm-line tm-line--solid"></div>
+            <span class="tm-label" style="color: #00f0ff;">Full Density Feedback</span>
+          </div>
+        </div>
+
+        <div class="traffic-mode traffic-mode--corridor">
+          <div class="mm-icon">🚨</div>
+          <span class="tm-badge" style="background: rgba(255, 179, 0, 0.1); color: #ffb300;">Emergency</span>
+          <h3>Green Corridor Mode</h3>
+          <p>Active when GPS trackers on emergency vehicles signal proximity. Forces a cascaded green wave ahead of the vehicle.</p>
+          <div class="tm-visual">
+            <div class="tm-dot tm-dot--amber"></div>
+            <div class="tm-line tm-line--solid" style="background: rgba(255, 179, 0, 0.4);"></div>
+            <span class="tm-label" style="color: #ffb300;">100% Priority Clear</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 05 — Architecture Layers -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">05 — Architecture Layers</div>
+      <h2 class="cs-heading">Decentralized City Analytics Architecture</h2>
+      <p class="cs-subtitle">To prevent a single point of failure at city scale, the platform is structured in three cooperative coordination layers.</p>
+
+      <div class="urban-layers">
+        <div class="urban-layer">
+          <div class="ul-header">
+            <div class="ul-num">01</div>
+            <div class="ul-title">
+              <h3>Edge Sensing & Inference Layer</h3>
+              <p class="ul-desc">Junction Edge Computers processing 4K live video streams locally.</p>
+            </div>
+          </div>
+          <div class="ul-items">
+            <span>YOLO Camera Nodes</span>
+            <span>Vehicle Classification</span>
+            <span>Local Density Computation</span>
+            <span>Hardware Failover Relays</span>
+          </div>
+          <div class="ul-example">
+            <div class="ul-example-label">Edge JSON Output</div>
+            <div class="ul-code">
+              <span class="code-line"><span class="code-key">"intersection_id":</span> "ND-042-ConnaughtPlace",</span>
+              <span class="code-line"><span class="code-key">"approach_north":</span> { "cars": 42, "buses": 4, "autos": 18, "queue_meters": 120 },</span>
+              <span class="code-line"><span class="code-key">"recommended_phase_seconds":</span> 38</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="urban-layer urban-layer--highlight">
+          <div class="ul-header">
+            <div class="ul-num" style="color: #00f0ff;">02</div>
+            <div class="ul-title">
+              <h3>Grid Coordinator Layer</h3>
+              <p class="ul-desc">Neighborhood mesh network synchronizing adjacent intersections to generate a fluid "Green Wave".</p>
+            </div>
+          </div>
+          <div class="ul-items">
+            <span style="color: #00f0ff; border-color: rgba(0, 240, 255, 0.2);">Junction Peer-to-Peer Mesh</span>
+            <span style="color: #00f0ff; border-color: rgba(0, 240, 255, 0.2);">Green Wave Coordination</span>
+            <span style="color: #00f0ff; border-color: rgba(0, 240, 255, 0.2);">Platoon Speed Recommendations</span>
+          </div>
+          <div class="traffic-analytics-demo">
+            <div class="tad-feed">
+              <span class="tad-label">Local Junction A</span>
+              <p>"Approach South experiencing heavy platoon exit of 80 vehicles, heading North to Junction B."</p>
+            </div>
+            <div class="tad-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+            <div class="tad-decision">
+              <span class="tad-label" style="color: #00f0ff;">Coordinating Junction B</span>
+              <p>"Extending Approach South green phase by 14 seconds to clear incoming vehicle platoon without stopping."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="urban-layer">
+          <div class="ul-header">
+            <div class="ul-num">03</div>
+            <div class="ul-title">
+              <h3>Central Brain Cloud Layer</h3>
+              <p class="ul-desc">City-scale analytical system tracking macro movement trends, historical bottleneck clusters, and public transit priorities.</p>
+            </div>
+          </div>
+          <div class="ul-items">
+            <span>Macro Flow Prediction</span>
+            <span>Historical Congestion Index</span>
+            <span>Public Transit Dispatch Synergies</span>
+            <span>Analytical HUD Dashboards</span>
+          </div>
+          <div class="ul-example">
+            <div class="ul-example-label">Multi-Agent Value Allocation</div>
+            <div class="queue-formula">
+              <div class="qf-item">
+                <span class="qf-icon">⏱️</span>
+                <span>Queue Waiting Duration (w)</span>
+              </div>
+              <span class="qf-plus">+</span>
+              <div class="qf-item">
+                <span class="qf-icon">🚎</span>
+                <span>Vehicle-Class Weight (w_c)</span>
+              </div>
+              <span class="qf-plus">+</span>
+              <div class="qf-item">
+                <span class="qf-icon">🚨</span>
+                <span>Emergency Priority Coefficient (P)</span>
+              </div>
+            </div>
+            <p class="ul-note">Combined score determines signal phase prioritization coefficients inside the dynamic controller loop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 06 — Data Processing Pipeline -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">06 — Data Engineering Pipeline</div>
+      <h2 class="cs-heading">The Smart Mobility Data Pipeline</h2>
+      <p class="cs-subtitle">How raw video frames are ingested, parsed, and translated into optimized physical traffic signals within milliseconds.</p>
+
+      <div class="traffic-pipeline">
+        <div class="bp-step bp-step--active">
+          <div class="bp-icon">📹</div>
+          <span class="bp-label">Frame Ingest</span>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step bp-step--active">
+          <div class="bp-icon">🖼️</div>
+          <span class="bp-label">Object Detect</span>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step bp-step--active">
+          <div class="bp-icon">🧮</div>
+          <span class="bp-label">Flow Calculation</span>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step bp-step--active">
+          <div class="bp-icon">🤝</div>
+          <span class="bp-label">Mesh Negotiate</span>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step bp-step--final" style="border-color: rgba(255, 179, 0, 0.3);">
+          <div class="bp-icon" style="border-color: rgba(255, 179, 0, 0.25); color: #ffb300;">🚦</div>
+          <span class="bp-label">Signal Override</span>
+        </div>
+      </div>
+
+      <div class="t-pipeline-details">
+        <div class="tpd-step">
+          <div class="tpd-header">
+            <span class="tm-badge tpipe-num">Step 1</span>
+            <h3>Continuous Frame Ingestion</h3>
+          </div>
+          <p>Junction IP cameras stream high-definition frames into a localized edge compute ring-buffer. Ingestion pipelines maintain a strict sub-15ms frame-buffer window to avoid analytical latency.</p>
+        </div>
+
+        <div class="tpd-step tpd-step--highlight">
+          <div class="tpd-header">
+            <span class="tm-badge tpipe-num" style="background: rgba(0, 240, 255, 0.1); color: #00f0ff;">Step 2</span>
+            <h3>Computer Vision Object Classification</h3>
+          </div>
+          <p>YOLO-based computer vision models parse frame regions, identifying bounding boxes for distinct vehicle types (autos, buses, heavy trucks, cars, motorbikes, pedestrians). This accounts for the heterogeneous multi-modal nature of Indian roads.</p>
+          <div class="edge-grid">
+            <div class="edge-item">
+              <span class="edge-type">Auto-Rickshaw Bounding Box</span>
+              <p>"Highly dense spatial placement. Vehicle count high, space occupancy medium."</p>
+            </div>
+            <div class="edge-item">
+              <span class="edge-type">Public Transit Bus</span>
+              <p>"High priority coefficient due to 50+ passenger passenger load capacity."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tpd-step">
+          <div class="tpd-header">
+            <span class="tm-badge tpipe-num">Step 3</span>
+            <h3>Vehicle Density Calculation</h3>
+          </div>
+          <p>Translates spatial bounding box coordinates into real-time vehicle density estimates, calculating meters of vehicle queues rather than basic vehicle tallies. This maps spatial bottlenecks accurately.</p>
+        </div>
+
+        <div class="tpd-step">
+          <div class="tpd-header">
+            <span class="tm-badge tpipe-num">Step 4</span>
+            <h3>Neighborhood Mesh Negotiation</h3>
+          </div>
+          <p>Before changing phases, the local junction node communicates queue metrics to adjacent peer nodes over high-speed neighborhood mesh lines to prevent downstream gridlocks.</p>
+        </div>
+
+        <div class="tpd-step">
+          <div class="tpd-header">
+            <span class="tm-badge tpipe-num">Step 5</span>
+            <h3>Physical Signal Override Actuation</h3>
+          </div>
+          <p>The system issues electrical signal switches to the junction traffic controller, executing phase overrides securely with an embedded hardware watchguard layer preventing unsafe transitions.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 07 — Key Tradeoffs -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">07 — Design Tradeoffs</div>
+      <h2 class="cs-heading">Balancing Complex City Tensions</h2>
+      <p class="cs-subtitle">Urban mobility systems design is a series of trade-off optimizations. Here is how major architectural decisions were navigated.</p>
+
+      <div class="traffic-tradeoffs">
+        <div class="t-tradeoff-card">
+          <div class="ttf-header">
+            <span class="ttf-num">01</span>
+            <h3>Edge Compute vs Cloud Latency</h3>
+          </div>
+          <div class="ttf-body">
+            <div class="ttf-problem">
+              <span class="ttf-label ttf-label--problem">Tension</span>
+              <p>Sending multiple 4K video feeds from thousands of junctions to a central cloud server would require massive, cost-prohibitive bandwidth and risk latency delays.</p>
+            </div>
+            <div class="ttf-decision">
+              <span class="ttf-label ttf-label--decision">Decision</span>
+              <p><strong>Decentralized Edge Processing.</strong> YOLO models run locally on junction edge hardware. Only lightweight numerical metadata (queue lengths, arrival rates) is pushed to the cloud.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-tradeoff-card">
+          <div class="ttf-header">
+            <span class="ttf-num">02</span>
+            <h3>Auto-AI Override vs Traffic Officer Authority</h3>
+          </div>
+          <div class="ttf-body">
+            <div class="ttf-problem">
+              <span class="ttf-label ttf-label--problem">Tension</span>
+              <p>Unpredictable city events (parades, VIP movements, manual police dispatches) require direct human control, but sudden override disruptions can break automated coordinate models.</p>
+            </div>
+            <div class="ttf-decision">
+              <span class="ttf-label ttf-label--decision">Decision</span>
+              <p><strong>Layered Priority Hierarchy.</strong> Physical officer switches immediately override AI control. When manual override is disabled, the AI system gracefully transitions back into active mesh mode over 2 cycles.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-tradeoff-card">
+          <div class="ttf-header">
+            <span class="ttf-num">03</span>
+            <h3>Mass Transit vs Private Vehicles</h3>
+          </div>
+          <div class="ttf-body">
+            <div class="ttf-problem">
+              <span class="ttf-label ttf-label--problem">Tension</span>
+              <p>Minimizing overall vehicle latency would favor passenger cars which make up 70% of vehicles. However, public transit buses carry 10x more passengers per square meter of road.</p>
+            </div>
+            <div class="ttf-decision">
+              <span class="ttf-label ttf-label--decision">Decision</span>
+              <p><strong>Passenger-Weighted Prioritization.</strong> Signal scoring prioritizes the absolute passenger volume over pure vehicle count. A bus is weighted 40x higher than a private sedan in density scores.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-tradeoff-card">
+          <div class="ttf-header">
+            <span class="ttf-num">04</span>
+            <h3>Single Intersection vs Area Network Flow</h3>
+          </div>
+          <div class="ttf-body">
+            <div class="ttf-problem">
+              <span class="ttf-label ttf-label--problem">Tension</span>
+              <p>Clearing a massive traffic queue at one junction completely can overwhelm down-stream intersections, creating localized gridlocks further up the road network.</p>
+            </div>
+            <div class="ttf-decision">
+              <span class="ttf-label ttf-label--decision">Decision</span>
+              <p><strong>Mesh Horizon Constraints.</strong> Local overrides are bound by neighboring queues. If Junction B is at 90% storage capacity, Junction A is restricted from executing overrides that push more traffic to it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 08 — Challenges Explored -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">08 — Hard Realities</div>
+      <h2 class="cs-heading">Tackling Edge Cases in Megacity Infrastructure</h2>
+      <p class="cs-subtitle">Theoretical models break down when facing real-world urban environments. Here are three critical edge-cases explored.</p>
+
+      <div class="traffic-challenges">
+        <div class="tc-item">
+          <span class="tch-icon">🌧️</span>
+          <p>Vision occlusion during heavy monsoons and winter dust/smog storms.</p>
+        </div>
+        <div class="tc-item">
+          <span class="tch-icon">🐄</span>
+          <p>Unstructured obstacles (animals, roadside stalls, broken vehicles) causing false positive density signals.</p>
+        </div>
+        <div class="tc-item">
+          <span class="tch-icon">🔌</span>
+          <p>Intermittent power grid disruptions at the edge requiring solar backup integration and offline static fallback loops.</p>
+        </div>
+      </div>
+
+      <div class="traffic-insight">
+        <div class="tci-before">
+          <span class="tci-label">Naïve Model</span>
+          <p>Basic Bounding-Box Tally</p>
+        </div>
+        <div class="tci-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="tci-after">
+          <span class="tci-label">Resilient Model</span>
+          <p>Spatiotemporal Queue Metric Tracking</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 09 — Future Smart Mobility Vision -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">09 — Future smart mobility</div>
+      <h2 class="cs-heading">The Smart Infrastructure Horizon</h2>
+      <p class="cs-subtitle">How city systems will expand as vehicle connectivity and cooperative urban networks evolve.</p>
+
+      <div class="traffic-future-grid">
+        <div class="t-future-card">
+          <div class="tfc-icon">🛰️</div>
+          <h3>Vehicle-to-Infrastructure (V2I)</h3>
+          <p>Direct communication with on-board vehicle navigation layers to suggest optimal platoon speeds, creating seamless signal clearances without stops.</p>
+          <div class="tfc-items">
+            <span>Cooperative Cruise</span>
+            <span>Speed Advisory</span>
+            <span>Junction Reservation</span>
+          </div>
+        </div>
+
+        <div class="t-future-card">
+          <div class="tfc-icon">📊</div>
+          <h3>Predictive Demand Analytics</h3>
+          <p>Integrating real-time event schedules, weather forecasts, and calendar patterns to dynamically pre-allocate corridor capacities before gridlocks happen.</p>
+          <div class="tfc-items">
+            <span>Pre-allocation</span>
+            <span>Event Routing</span>
+            <span>Smog Mitigation</span>
+          </div>
+        </div>
+
+        <div class="t-future-card">
+          <div class="tfc-icon">🚏</div>
+          <h3>Automated Transit Corridors</h3>
+          <p>Integrating with city bus GPS coordinates to create virtual green waves, drastically increasing passenger throughput across major express corridors.</p>
+          <div class="tfc-example">
+            <p>"Corridor North-West bus green wave override successfully activated. 240 commuters cleared Connaught intersection in 12s."</p>
+          </div>
+        </div>
+
+        <div class="t-future-card">
+          <div class="tfc-icon">🚶</div>
+          <h3>Pedestrian Safety Adaptive Cycles</h3>
+          <p>Sensing large pedestrian gatherings at crossings and automatically extending green pedestrian clearance phases during high foot-traffic windows.</p>
+          <div class="tfc-items">
+            <span>Pedestrian Sensing</span>
+            <span>Adaptive Crosswalks</span>
+            <span>Dynamic Safety Zones</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- 10 — What I Learned -->
+    <section class="cs-section">
+      <div class="cs-section-label" style="color: #ffb300;">10 — Lessons & Impact</div>
+      <h2 class="cs-heading">Key Systems Architecture Takeaways</h2>
+      <p class="cs-subtitle">Delhi Traffic AI explored the extreme realities of designing real-time, high-availability physical systems for public spaces.</p>
+
+      <div class="traffic-learnings">
+        <div class="tls-item">
+          <div class="tls-icon">🏙️</div>
+          <div class="tls-body">
+            <h4>Megacity Scale Engineering</h4>
+            <p>Learned that designing AI for urban settings requires extreme hardware resilience, graceful offline fallbacks, and local edge processing to handle data-throughput load.</p>
+          </div>
+        </div>
+
+        <div class="tls-item">
+          <div class="tls-icon">🔌</div>
+          <div class="tls-body">
+            <h4>Data Ingestion Pipelines</h4>
+            <p>Developed deep respect for sub-millisecond data pipelines. Even minor latency backlogs in video ingestion completely destroy active signal coordination.</p>
+          </div>
+        </div>
+
+        <div class="tls-item">
+          <div class="tls-icon">👥</div>
+          <div class="tls-body">
+            <h4>Multi-Agent System Coordination</h4>
+            <p>Explored how local agents (individual junctions) can coordinate through localized consensus algorithms to generate macro-level optimization (city-wide green waves).</p>
+          </div>
+        </div>
+
+        <div class="tls-item">
+          <div class="tls-icon">🛠️</div>
+          <div class="tls-body">
+            <h4>Real-World Constraint Architectures</h4>
+            <p>Designed systems around the absolute realities of infrastructure: camera dirt, sudden monsoons, and the critical need for human-in-the-loop override authority.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Highlight Quote -->
+      <div class="final-quote final-quote--traffic reveal">
+        <span class="fq-small fq-small--traffic">Final System Thought</span>
+        <p>"Smart cities aren't built by deploying more massive mainframe systems; they are built by giving the edge the intelligence to self-organize, self-correct, and optimize flow."</p>
+      </div>
+
+      <!-- Back To Portfolio Button -->
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="index.html" class="btn back-cta-btn back-cta-btn--traffic">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to Portfolio
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hritik — AI Systems Designer & Builder</title>
+  <meta name="description" content="Hritik's portfolio — Designing AI systems focused on memory, retrieval, automation, and intelligent workflows.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hritik — AI Systems Designer & Builder">
+  <meta property="og:description" content="Designing AI systems focused on memory, retrieval, automation, and intelligent workflows.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       TOP ICON NAVBAR
+       ═══════════════════════════════════ -->
+  <nav class="top-nav" id="top-nav">
+    <a href="#hero" class="active" title="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </a>
+    <a href="#projects" title="Projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    </a>
+    <a href="#experience" title="Experience">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+    </a>
+    <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════
+       MAIN LAYOUT
+       ═══════════════════════════════════ -->
+  <div class="layout">
+
+    <!-- ─── LEFT SIDEBAR ─── -->
+    <aside class="sidebar">
+      <div class="profile-card reveal">
+        <div class="profile-photo-wrapper">
+          <img src="assets/profile.png" alt="Hritik — AI Systems Designer">
+        </div>
+        <h2>Hritik</h2>
+        <span class="profile-emoji">🔥</span>
+        <p class="bio">An AI Systems Designer who builds intelligent systems around memory, retrieval, and automation.</p>
+        <div class="social-icons">
+          <a href="#" target="_blank" rel="noopener" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="mailto:hello@hritik.dev" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ─── RIGHT CONTENT ─── -->
+    <main class="content">
+
+      <!-- ══════ HERO ══════ -->
+      <section class="section" id="hero">
+        <div class="section-heading reveal">
+          <span class="solid">AI Systems</span>
+          <span class="outline">Designer</span>
+        </div>
+        <p class="hero-description reveal reveal-delay-1">
+          Passionate about designing AI-powered systems focused on memory, retrieval, automation, and intelligent workflows — exploring how humans and AI can work together more effectively.
+        </p>
+
+        <div class="stats-row reveal reveal-delay-2">
+          <div class="stat-item">
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Major<br>Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="7">0</div>
+            <div class="stat-label">Focus<br>Areas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="23">0</div>
+            <div class="stat-label">Years Old<br>Builder</div>
+          </div>
+        </div>
+
+        <div class="service-cards reveal reveal-delay-3">
+          <div class="service-card service-card--orange">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3>RAG Systems,<br>AI Memory</h3>
+            <div class="card-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <div class="service-card service-card--lime">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3>Data Engineering,<br>System Architecture</h3>
+            <div class="card-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ══════ PROJECTS ══════ -->
+      <section class="section" id="projects">
+        <div class="section-heading reveal">
+          <span class="solid">Recent</span>
+          <span class="outline">Projects</span>
+        </div>
+
+        <div class="project-list">
+          <a href="brain-os.html" class="project-item reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-thumb">
+              <img src="assets/brain-os.png" alt="Brain OS">
+            </div>
+            <div class="project-info">
+              <h3>Brain OS</h3>
+              <p>AI Memory Operating System</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </a>
+
+          <a href="company-brain.html" class="project-item reveal reveal-delay-1" style="text-decoration:none;color:inherit;">
+            <div class="project-thumb">
+              <img src="assets/company-brain.png" alt="Company Brain">
+            </div>
+            <div class="project-info">
+              <h3>Company Brain</h3>
+              <p>Enterprise Knowledge Operating System</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </a>
+
+          <a href="delhi-traffic.html" class="project-item reveal reveal-delay-2" style="text-decoration:none;color:inherit;">
+            <div class="project-thumb">
+              <img src="assets/delhi-traffic.png" alt="Delhi Traffic AI">
+            </div>
+            <div class="project-info">
+              <h3>Delhi Traffic AI</h3>
+              <p>AI-Based Urban Traffic Intelligence</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ══════ EXPERIENCE ══════ -->
+      <section class="section" id="experience">
+        <div class="section-heading reveal">
+          <span class="solid">Currently</span>
+          <span class="outline">Exploring</span>
+        </div>
+
+        <div class="experience-list">
+          <div class="experience-item reveal">
+            <div class="exp-content">
+              <h3>IIT Madras BS in Programming & Data Science</h3>
+              <p>Building strong foundations in programming, mathematics, statistics, and computational thinking.</p>
+              <span class="exp-date">2024 — Present</span>
+            </div>
+            <div class="exp-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+
+          <div class="experience-item reveal reveal-delay-1">
+            <div class="exp-content">
+              <h3>Independent AI Systems Exploration</h3>
+              <p>Designing AI systems around memory, retrieval, intelligent workflows, and enterprise knowledge systems.</p>
+              <span class="exp-date">2024 — Present</span>
+            </div>
+            <div class="exp-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+
+          <div class="experience-item reveal reveal-delay-2">
+            <div class="exp-content">
+              <h3>Future Builder Mindset</h3>
+              <p>Exploring ideas at the intersection of AI systems, product design, and entrepreneurship.</p>
+              <span class="exp-date">Present</span>
+            </div>
+            <div class="exp-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ══════ TOOLS / SKILLS ══════ -->
+      <section class="section" id="tools">
+        <div class="section-heading reveal">
+          <span class="solid">Premium</span>
+          <span class="outline">Tools</span>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool-item reveal">
+            <div class="tool-icon">🧠</div>
+            <div class="tool-info">
+              <h4>RAG Systems</h4>
+              <p>Retrieval-Augmented Generation</p>
+            </div>
+          </div>
+          <div class="tool-item reveal reveal-delay-1">
+            <div class="tool-icon">🔍</div>
+            <div class="tool-info">
+              <h4>Semantic Search</h4>
+              <p>Vector Databases & Embeddings</p>
+            </div>
+          </div>
+          <div class="tool-item reveal reveal-delay-1">
+            <div class="tool-icon">⚡</div>
+            <div class="tool-info">
+              <h4>Prompt Engineering</h4>
+              <p>LLM Optimization</p>
+            </div>
+          </div>
+          <div class="tool-item reveal reveal-delay-2">
+            <div class="tool-icon">🤖</div>
+            <div class="tool-info">
+              <h4>Agent Systems</h4>
+              <p>Autonomous AI Workflows</p>
+            </div>
+          </div>
+          <div class="tool-item reveal reveal-delay-2">
+            <div class="tool-icon">⚛️</div>
+            <div class="tool-info">
+              <h4>React</h4>
+              <p>Frontend Framework</p>
+            </div>
+          </div>
+          <div class="tool-item reveal reveal-delay-3">
+            <div class="tool-icon">🔧</div>
+            <div class="tool-info">
+              <h4>System Design</h4>
+              <p>Scalable Architecture</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ══════ VISION / THOUGHTS ══════ -->
+      <section class="section" id="thoughts">
+        <div class="section-heading reveal">
+          <span class="solid">Design</span>
+          <span class="outline">Thoughts</span>
+        </div>
+
+        <div class="thought-list">
+          <div class="thought-item reveal">
+            <div class="thought-header">
+              <h3>The Future of AI Is Persistent Memory</h3>
+              <div class="thought-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+            <p>I believe the next generation of software will not be static applications — it will be intelligent systems that understand context, remember information, and continuously assist people.</p>
+            <div class="thought-meta">
+              <span>2025</span>
+              <span>5min read</span>
+            </div>
+          </div>
+
+          <div class="thought-item reveal reveal-delay-1">
+            <div class="thought-header">
+              <h3>Why RAG Is the Bridge Between AI and Reality</h3>
+              <div class="thought-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+            <p>Retrieval-Augmented Generation grounds AI in real data — making systems not just creative, but factually reliable and context-aware.</p>
+            <div class="thought-meta">
+              <span>2025</span>
+              <span>4min read</span>
+            </div>
+          </div>
+
+          <div class="thought-item reveal reveal-delay-2">
+            <div class="thought-header">
+              <h3>Building AI Products That Actually Solve Problems</h3>
+              <div class="thought-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+            <p>My goal is to contribute to building AI systems that are reliable, useful, and capable of solving meaningful real-world problems at scale.</p>
+            <div class="thought-meta">
+              <span>2025</span>
+              <span>6min read</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    </main>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════ -->
+  <footer class="footer">
+    <p>Built by <a href="#">Hritik</a> | Powered by Curiosity</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

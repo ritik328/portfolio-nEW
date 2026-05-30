@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain OS — Case Study | Hritik</title>
+  <meta name="description" content="Brain OS: An AI-powered personal memory and productivity operating system with persistent memory, semantic retrieval, and intelligent workflows.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/brain-os.css">
+</head>
+<body class="case-study-page">
+
+  <!-- ═══ BACK NAV ═══ -->
+  <nav class="case-nav">
+    <a href="index.html" class="back-link">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Portfolio
+    </a>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span class="case-nav-label">Case Study</span>
+      <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO BANNER ═══ -->
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-badge reveal">AI Memory Operating System</div>
+      <h1 class="case-hero-title reveal reveal-delay-1">
+        <span class="solid-block">Brain</span>
+        <span class="outline-block">OS</span>
+      </h1>
+      <p class="case-hero-subtitle reveal reveal-delay-2">
+        An AI-powered personal memory and productivity operating system that solves a core limitation of modern assistants: lack of persistent memory and contextual continuity.
+      </p>
+      <div class="case-hero-meta reveal reveal-delay-3">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">AI Systems Design</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Type</span>
+          <span class="meta-value">Personal Intelligence System</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">Memory · RAG · Privacy</span>
+        </div>
+      </div>
+      <div class="case-hero-tags reveal reveal-delay-4">
+        <span class="cs-tag cs-tag--brain">RAG</span>
+        <span class="cs-tag cs-tag--brain">AI Memory</span>
+        <span class="cs-tag cs-tag--brain">Semantic Search</span>
+        <span class="cs-tag cs-tag--brain">Context Retrieval</span>
+        <span class="cs-tag cs-tag--brain">Personal Intelligence</span>
+        <span class="cs-tag cs-tag--brain">Automation</span>
+      </div>
+    </div>
+    <div class="case-hero-img reveal reveal-delay-3">
+      <img src="assets/brain-os.png" alt="Brain OS visualization">
+    </div>
+  </header>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="case-content">
+
+    <!-- ══════════════════════════════════
+         01 — PRIVACY & USER CONTROL
+         ══════════════════════════════════ -->
+    <section class="cs-section" id="privacy">
+      <div class="cs-section-label reveal">01 — Privacy & User Control</div>
+      <h2 class="cs-heading reveal">Memory Should Be Useful, But User-Controlled</h2>
+
+      <div class="cs-blockquote cs-blockquote--brain reveal">
+        <span class="bq-icon">🔒</span>
+        <p>An assistant that remembers everything can quickly become intrusive if users do not control what is stored.</p>
+      </div>
+
+      <div class="cs-text-block reveal">
+        <p>Instead of treating memory as automatic and permanent, Brain OS explores <strong>memory visibility controls</strong> — where users decide what should be remembered, what should remain temporary, what should be deleted, and what should be private.</p>
+      </div>
+
+      <!-- Memory Modes Infographic -->
+      <div class="memory-modes reveal">
+        <div class="memory-mode memory-mode--private">
+          <div class="mm-icon">🛡️</div>
+          <div class="mm-badge">Private Mode</div>
+          <h3>Private Mode</h3>
+          <p>Sensitive conversations remain excluded from long-term storage.</p>
+          <div class="mm-visual">
+            <span class="mm-dot mm-dot--red"></span>
+            <span class="mm-line"></span>
+            <span class="mm-label">Not stored</span>
+          </div>
+        </div>
+
+        <div class="memory-mode memory-mode--temp">
+          <div class="mm-icon">⏳</div>
+          <div class="mm-badge">Temporary</div>
+          <h3>Temporary Memory</h3>
+          <p>Context lasts for a short duration only, then fades away.</p>
+          <div class="mm-visual">
+            <span class="mm-dot mm-dot--yellow"></span>
+            <span class="mm-line mm-line--dashed"></span>
+            <span class="mm-label">Short-lived</span>
+          </div>
+        </div>
+
+        <div class="memory-mode memory-mode--persist">
+          <div class="mm-icon">💎</div>
+          <div class="mm-badge">Persistent</div>
+          <h3>Persistent Memory</h3>
+          <p>Important projects, goals, and workflows become part of long-term knowledge.</p>
+          <div class="mm-visual">
+            <span class="mm-dot mm-dot--green"></span>
+            <span class="mm-line mm-line--solid"></span>
+            <span class="mm-label">Permanent</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-blockquote cs-blockquote--brain reveal" style="margin-top: 40px;">
+        <span class="bq-icon">✨</span>
+        <p>The goal: trustworthy AI memory rather than invisible surveillance.</p>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ══════════════════════════════════
+         02 — DATA & MEMORY ARCHITECTURE
+         ══════════════════════════════════ -->
+    <section class="cs-section" id="architecture">
+      <div class="cs-section-label reveal">02 — Data & Memory Architecture</div>
+      <h2 class="cs-heading reveal">A Hybrid Memory System</h2>
+      <p class="cs-subtitle reveal">Instead of relying on one storage system, Brain OS combines multiple memory layers for different types of information.</p>
+
+      <div class="arch-layers">
+        <!-- Structured Memory -->
+        <div class="arch-layer reveal">
+          <div class="al-header">
+            <div class="al-num">01</div>
+            <div class="al-title">
+              <h3>Structured Memory</h3>
+              <p class="al-desc">Organized data that's easy to query and update</p>
+            </div>
+          </div>
+          <div class="al-items">
+            <span>📋 Tasks</span>
+            <span>📅 Schedules</span>
+            <span>🎯 Goals</span>
+            <span>⚙️ Preferences</span>
+            <span>⏰ Reminders</span>
+          </div>
+          <div class="al-example">
+            <div class="al-example-label">Example</div>
+            <div class="al-code">
+              <div class="code-line"><span class="code-key">Goal:</span> Clear IIT exam</div>
+              <div class="code-line"><span class="code-key">Weak Area:</span> Calculus</div>
+              <div class="code-line"><span class="code-key">Study Style:</span> Visual learning</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unstructured Memory -->
+        <div class="arch-layer reveal">
+          <div class="al-header">
+            <div class="al-num">02</div>
+            <div class="al-title">
+              <h3>Unstructured Memory</h3>
+              <p class="al-desc">Rich content requiring semantic retrieval</p>
+            </div>
+          </div>
+          <div class="al-items">
+            <span>📝 Notes</span>
+            <span>📄 PDFs</span>
+            <span>💬 Conversations</span>
+            <span>🎙️ Voice Transcripts</span>
+            <span>📚 Learning Materials</span>
+            <span>🔬 Research</span>
+          </div>
+        </div>
+
+        <!-- Semantic Memory Layer -->
+        <div class="arch-layer arch-layer--highlight reveal">
+          <div class="al-header">
+            <div class="al-num">03</div>
+            <div class="al-title">
+              <h3>Semantic Memory Layer</h3>
+              <p class="al-desc">Vector-based retrieval by meaning, not keywords</p>
+            </div>
+          </div>
+          <div class="semantic-demo">
+            <div class="sd-query">
+              <span class="sd-label">User asks</span>
+              <p>"What was that startup idea I had about traffic?"</p>
+            </div>
+            <div class="sd-arrow">
+              <svg width="32" height="24" viewBox="0 0 32 24"><path d="M0 12 L24 12 M18 4 L26 12 L18 20" stroke="#c5ff41" stroke-width="2" fill="none"/></svg>
+            </div>
+            <div class="sd-result">
+              <span class="sd-label">Brain OS retrieves</span>
+              <p>Delhi AI traffic system notes</p>
+            </div>
+          </div>
+          <p class="al-note">Even when wording changes — meaning-based matching finds the right memory.</p>
+        </div>
+
+        <!-- Context Ranking -->
+        <div class="arch-layer reveal">
+          <div class="al-header">
+            <div class="al-num">04</div>
+            <div class="al-title">
+              <h3>Context Ranking System</h3>
+              <p class="al-desc">Not all memories matter equally</p>
+            </div>
+          </div>
+          <div class="ranking-formula">
+            <div class="rf-item">
+              <span class="rf-icon">🎯</span>
+              <span>Relevance Score</span>
+            </div>
+            <span class="rf-plus">+</span>
+            <div class="rf-item">
+              <span class="rf-icon">⚡</span>
+              <span>Priority Score</span>
+            </div>
+            <span class="rf-plus">+</span>
+            <div class="rf-item">
+              <span class="rf-icon">🧭</span>
+              <span>Goal Alignment</span>
+            </div>
+            <span class="rf-plus">+</span>
+            <div class="rf-item">
+              <span class="rf-icon">🕐</span>
+              <span>Recency</span>
+            </div>
+            <span class="rf-plus">+</span>
+            <div class="rf-item">
+              <span class="rf-icon">💪</span>
+              <span>Memory Strength</span>
+            </div>
+          </div>
+          <div class="cs-blockquote cs-blockquote--brain" style="margin-top: 20px;">
+            <span class="bq-icon">💡</span>
+            <p>Retrieve less, but retrieve better.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ══════════════════════════════════
+         03 — AI PIPELINE
+         ══════════════════════════════════ -->
+    <section class="cs-section" id="pipeline">
+      <div class="cs-section-label reveal">03 — AI Pipeline Thinking</div>
+      <h2 class="cs-heading reveal">Multi-Stage Intelligence Pipeline</h2>
+      <p class="cs-subtitle reveal">Instead of a single prompt → answer system, Brain OS uses a multi-stage pipeline where each step refines the response.</p>
+
+      <!-- Pipeline Visual -->
+      <div class="brain-pipeline reveal">
+        <div class="bp-step">
+          <div class="bp-icon">📥</div>
+          <div class="bp-label">Input</div>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step">
+          <div class="bp-icon">🧠</div>
+          <div class="bp-label">Intent Understanding</div>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step bp-step--active">
+          <div class="bp-icon">🔍</div>
+          <div class="bp-label">Memory Retrieval</div>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step">
+          <div class="bp-icon">📊</div>
+          <div class="bp-label">Context Ranking</div>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step">
+          <div class="bp-icon">📝</div>
+          <div class="bp-label">Response Planning</div>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step">
+          <div class="bp-icon">🤖</div>
+          <div class="bp-label">LLM Generation</div>
+        </div>
+        <div class="bp-connector"></div>
+        <div class="bp-step bp-step--final">
+          <div class="bp-icon">💾</div>
+          <div class="bp-label">Memory Update</div>
+        </div>
+      </div>
+
+      <!-- Pipeline Detail Steps -->
+      <div class="pipeline-details">
+        <!-- Step 1 -->
+        <div class="pd-step reveal">
+          <div class="pd-header">
+            <span class="pipe-num">Step 1</span>
+            <h3>Intent Understanding</h3>
+          </div>
+          <p>Before retrieval, the system identifies what the user is trying to do. This determines how memory is retrieved.</p>
+          <div class="intent-grid">
+            <div class="intent-item">
+              <span class="intent-type">📅 Planning</span>
+              <p>"Help me prepare for tomorrow"</p>
+            </div>
+            <div class="intent-item">
+              <span class="intent-type">💭 Recall</span>
+              <p>"What was my startup idea?"</p>
+            </div>
+            <div class="intent-item">
+              <span class="intent-type">📚 Learning</span>
+              <p>"Explain derivatives again"</p>
+            </div>
+            <div class="intent-item">
+              <span class="intent-type">⚡ Productivity</span>
+              <p>"What should I work on next?"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="pd-step reveal">
+          <div class="pd-header">
+            <span class="pipe-num">Step 2</span>
+            <h3>Memory Retrieval</h3>
+          </div>
+          <p>Relevant context is retrieved from long-term memory. Instead of retrieving everything, the system narrows context intelligently.</p>
+          <div class="pipe-results">
+            <span>✓ Improved response quality</span>
+            <span>✓ Reduced hallucinations</span>
+            <span>✓ No irrelevant context overload</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="pd-step reveal">
+          <div class="pd-header">
+            <span class="pipe-num">Step 3</span>
+            <h3>Response Planning</h3>
+          </div>
+          <p>Before answering, the system conceptually plans: what information matters, what should be ignored, and what the user's actual goal is.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="pd-step pd-step--highlight reveal">
+          <div class="pd-header">
+            <span class="pipe-num">Step 4</span>
+            <h3>Memory Updating</h3>
+          </div>
+          <p>After interaction, Brain OS decides: should this memory persist, or should it fade away?</p>
+          <div class="cs-blockquote cs-blockquote--brain" style="margin-top: 16px;">
+            <span class="bq-icon">🔄</span>
+            <p>Dynamic memory intelligence instead of permanent storage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ══════════════════════════════════
+         04 — KEY DESIGN TRADEOFFS
+         ══════════════════════════════════ -->
+    <section class="cs-section" id="tradeoffs">
+      <div class="cs-section-label reveal">04 — Key Design Tradeoffs</div>
+      <h2 class="cs-heading reveal">Navigating Hard Decisions</h2>
+
+      <div class="tradeoffs-grid">
+        <div class="tradeoff-card reveal">
+          <div class="tf-header">
+            <span class="tf-num">01</span>
+            <h3>Memory vs Privacy</h3>
+          </div>
+          <div class="tf-body">
+            <div class="tf-problem">
+              <span class="tf-label tf-label--problem">⚠️ Tension</span>
+              <p>More memory improves personalization. But too much risks over-collection.</p>
+            </div>
+            <div class="tf-decision">
+              <span class="tf-label tf-label--decision">✅ Decision</span>
+              <p><strong>User-controlled memory.</strong> The assistant remembers intentionally.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tradeoff-card reveal reveal-delay-1">
+          <div class="tf-header">
+            <span class="tf-num">02</span>
+            <h3>Context Size vs Relevance</h3>
+          </div>
+          <div class="tf-body">
+            <div class="tf-problem">
+              <span class="tf-label tf-label--problem">⚠️ Tension</span>
+              <p>Large memory context increases costs and noise.</p>
+            </div>
+            <div class="tf-decision">
+              <span class="tf-label tf-label--decision">✅ Decision</span>
+              <p><strong>Retrieve only relevant information.</strong> Smaller but higher-quality context.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tradeoff-card reveal reveal-delay-2">
+          <div class="tf-header">
+            <span class="tf-num">03</span>
+            <h3>Automation vs User Agency</h3>
+          </div>
+          <div class="tf-body">
+            <div class="tf-problem">
+              <span class="tf-label tf-label--problem">⚠️ Tension</span>
+              <p>Over-automation can feel intrusive.</p>
+            </div>
+            <div class="tf-decision">
+              <span class="tf-label tf-label--decision">✅ Decision</span>
+              <p><strong>Assistive intelligence.</strong> The assistant helps, not controls.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tradeoff-card reveal reveal-delay-3">
+          <div class="tf-header">
+            <span class="tf-num">04</span>
+            <h3>General vs Personal Intelligence</h3>
+          </div>
+          <div class="tf-body">
+            <div class="tf-problem">
+              <span class="tf-label tf-label--problem">⚠️ Tension</span>
+              <p>LLMs know everything broadly, but lack personal context.</p>
+            </div>
+            <div class="tf-decision">
+              <span class="tf-label tf-label--decision">✅ Decision</span>
+              <p><strong>Deep understanding of one person</strong> over generic intelligence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ══════════════════════════════════
+         05 — CHALLENGES EXPLORED
+         ══════════════════════════════════ -->
+    <section class="cs-section" id="challenges">
+      <div class="cs-section-label reveal">05 — Challenges Explored</div>
+      <h2 class="cs-heading reveal">The Hard Questions</h2>
+
+      <div class="challenges-list reveal">
+        <div class="challenge-item">
+          <span class="ch-icon">❓</span>
+          <p>How much memory is too much?</p>
+        </div>
+        <div class="challenge-item">
+          <span class="ch-icon">💾</span>
+          <p>What deserves permanent storage?</p>
+        </div>
+        <div class="challenge-item">
+          <span class="ch-icon">⚔️</span>
+          <p>How should conflicting memories be handled?</p>
+        </div>
+        <div class="challenge-item">
+          <span class="ch-icon">🌫️</span>
+          <p>How should forgotten information decay?</p>
+        </div>
+        <div class="challenge-item">
+          <span class="ch-icon">🔇</span>
+          <p>How can memory stay useful without becoming noisy?</p>
+        </div>
+      </div>
+
+      <div class="challenge-insight reveal">
+        <div class="ci-before">
+          <span class="ci-label">The project became less about</span>
+          <p>storing information</p>
+        </div>
+        <div class="ci-arrow">→</div>
+        <div class="ci-after">
+          <span class="ci-label">and more about</span>
+          <p>designing intelligent memory behavior</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ══════════════════════════════════
+         06 — FUTURE VISION
+         ══════════════════════════════════ -->
+    <section class="cs-section" id="future">
+      <div class="cs-section-label reveal">06 — Future Vision</div>
+      <h2 class="cs-heading reveal">An AI Operating Layer for Everyday Life</h2>
+
+      <div class="future-grid">
+        <div class="future-card reveal">
+          <div class="fc-icon">🌐</div>
+          <h3>Multimodal Memory</h3>
+          <p>Remembering across formats</p>
+          <div class="fc-items">
+            <span>🎙️ Voice</span>
+            <span>📸 Screenshots</span>
+            <span>🎬 Videos</span>
+            <span>📄 PDFs</span>
+            <span>🌍 Web browsing</span>
+          </div>
+        </div>
+
+        <div class="future-card reveal reveal-delay-1">
+          <div class="fc-icon">🔮</div>
+          <h3>Proactive Assistance</h3>
+          <p>AI that anticipates needs</p>
+          <div class="fc-example">
+            <p>"You have an exam tomorrow. Based on prior performance, revise derivatives first."</p>
+          </div>
+        </div>
+
+        <div class="future-card reveal reveal-delay-2">
+          <div class="fc-icon">⚙️</div>
+          <h3>Intelligent Workflow Automation</h3>
+          <p>Automatic productivity</p>
+          <div class="fc-items">
+            <span>📂 Organize notes</span>
+            <span>🔔 Surface forgotten tasks</span>
+            <span>📎 Retrieve project context</span>
+            <span>📊 Summarize research</span>
+          </div>
+        </div>
+
+        <div class="future-card reveal reveal-delay-3">
+          <div class="fc-icon">🤖</div>
+          <h3>Memory-Aware AI Agents</h3>
+          <p>Agents with long-term context</p>
+          <div class="fc-items">
+            <span>📅 Scheduling</span>
+            <span>🔍 Retrieval</span>
+            <span>⚡ Automation</span>
+            <span>🔬 Research assistance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider">
+
+    <!-- ══════════════════════════════════
+         07 — WHAT I LEARNED
+         ══════════════════════════════════ -->
+    <section class="cs-section" id="learnings">
+      <div class="cs-section-label reveal">07 — What I Learned</div>
+      <h2 class="cs-heading reveal">How Intelligent Systems Should Behave Over Time</h2>
+
+      <div class="learnings-stack">
+        <div class="ls-item reveal">
+          <div class="ls-icon">🏗️</div>
+          <div class="ls-body">
+            <h4>Retrieval-Augmented Generation (RAG)</h4>
+            <p>How retrieval improves grounded intelligence.</p>
+          </div>
+        </div>
+        <div class="ls-item reveal">
+          <div class="ls-icon">🧠</div>
+          <div class="ls-body">
+            <h4>AI Memory Systems</h4>
+            <p>Why persistent memory matters for future assistants.</p>
+          </div>
+        </div>
+        <div class="ls-item reveal">
+          <div class="ls-icon">🎯</div>
+          <div class="ls-body">
+            <h4>Context Engineering</h4>
+            <p>How relevance often matters more than raw information volume.</p>
+          </div>
+        </div>
+        <div class="ls-item reveal">
+          <div class="ls-icon">🤝</div>
+          <div class="ls-body">
+            <h4>Human–AI Interaction</h4>
+            <p>Why future AI should support human thinking instead of replacing it.</p>
+          </div>
+        </div>
+        <div class="ls-item reveal">
+          <div class="ls-icon">📐</div>
+          <div class="ls-body">
+            <h4>Systems Design</h4>
+            <p>How large AI systems require retrieval layers, prioritization, pipelines, tradeoff decisions, and scalable architecture.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Quote -->
+      <div class="final-quote final-quote--brain reveal">
+        <p class="fq-small">Brain OS helped me think beyond</p>
+        <p class="fq-from">"How do we make AI smarter?"</p>
+        <p class="fq-small">toward</p>
+        <p class="fq-to">"How do we make AI genuinely <span class="fq-highlight fq-highlight--brain">useful over time?</span>"</p>
+      </div>
+    </section>
+
+    <!-- ── BACK CTA ── -->
+    <section class="cs-back-cta reveal">
+      <a href="index.html" class="back-cta-btn back-cta-btn--brain">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to All Projects
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer" style="border-top: 1px solid rgba(255,255,255,0.06);">
+    <p>Built by <a href="index.html">Hritik</a> | Powered by Curiosity</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Windows thumbnail database
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS files
+.DS_Store
+
+# Local App data / temporary
+.gemini/
+antigravity-ide/
