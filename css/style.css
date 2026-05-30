@@ -409,7 +409,7 @@ ul, ol { list-style: none; }
 
 .service-card--lime {
   background: var(--accent-lime);
-  color: var(--bg-primary);
+  color: #1a1816;
 }
 
 /* Decorative zigzag lines */
@@ -486,7 +486,7 @@ ul, ol { list-style: none; }
 
 .service-card--lime .card-arrow {
   background: rgba(0,0,0,0.12);
-  color: var(--bg-primary);
+  color: #1a1816;
 }
 
 .service-card:hover .card-arrow {
