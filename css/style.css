@@ -945,12 +945,17 @@ ul, ol { list-style: none; }
   }
 
   .top-nav {
-    top: 12px;
-    padding: 6px 10px;
-    gap: 4px;
+    top: auto;
+    bottom: 24px;
+    padding: 6px 12px;
+    gap: 8px;
+    width: auto;
+    max-width: max-content;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   }
 
-  .top-nav a {
+  .top-nav a,
+  .top-nav .theme-toggle-btn {
     width: 32px;
     height: 32px;
   }
@@ -975,8 +980,9 @@ ul, ol { list-style: none; }
   }
 
   .top-nav {
-    width: calc(100% - 32px);
-    justify-content: space-around;
-    padding: 6px 8px;
+    width: auto;
+    max-width: max-content;
+    padding: 6px 12px;
+    gap: 8px;
   }
 }
